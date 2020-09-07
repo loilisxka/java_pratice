@@ -1,4 +1,4 @@
-package java.Employer;
+package Employer.java;
 
 /**
  * this program demostrates the equals method

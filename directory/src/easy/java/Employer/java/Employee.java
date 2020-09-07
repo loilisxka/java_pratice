@@ -1,4 +1,4 @@
-package java.Employer;
+package Employer.java;
 
 import java.time.*;
 import java.util.Objects;
@@ -7,7 +7,7 @@ import java.util.Objects;
  * this class is an employee
  */
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
     private String name;
     private double salary;
     private LocalDate hireDay;
@@ -53,11 +53,16 @@ public class Employee {
         return getClass().getName() + "[name=" + name + ",salary=" + salary + "hirdDay=" + hireDay + "]";
     }
 
+    @Override
+    public int compareTo(Employee other) {
+        return Double.compare(this.salary, other.salary);
+    }
+
     public static void main(String[] args){
         Employee hu = new Employee("hu", 10000, 2020, 9 ,2);
         System.out.println(hu.getSalary());
         hu.raiseSalary(100);
         System.out.println(hu.getSalary());
-        System.out.println(hu);
+        System.out.println(hu.getHireDay());
     }
 }

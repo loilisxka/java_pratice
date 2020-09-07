@@ -1,4 +1,4 @@
-package java.Employer;
+package Employer.java;
 
 public class Manager extends Employee{
     private double bonus;
